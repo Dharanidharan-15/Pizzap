@@ -1,0 +1,161 @@
+.LandingPage {
+  background-color: rgb(2, 2, 94);
+  color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .LandingPageContainer {
+    height: 50%;
+    position: relative;
+    animation: containerwidth 2.2s forwards;
+    @keyframes containerwidth {
+      0% {
+        opacity: 0;
+        width: 250rem;
+      }
+      70% {
+        width: 20rem;
+        animation-delay: 2s;
+      }
+      100% {
+        width: 50rem;
+        animation-delay: 2s;
+      }
+    }
+
+    .LandingPagebRight {
+      height: 18rem;
+      width: 18rem;
+      background-color: rgb(5, 173, 122);
+      border-radius: 50%;
+      position: absolute;
+      right: 0;
+    }
+    .LandingPagebLeft {
+      height: 14rem;
+      width: 14rem;
+      background-color: rgb(5, 55, 171);
+      border-radius: 50%;
+      position: absolute;
+      bottom: 0;
+    }
+  }
+  .exitValues {
+    animation: exitAnimation 1.3s forwards;
+    @keyframes exitAnimation {
+      0% {
+        width: 30rem;
+        opacity: 1;
+      }
+
+      100% {
+        width: 220rem;
+        opacity: 0;
+      }
+    }
+  }
+  .glassEffect {
+    height: 20rem;
+    border-radius: 3rem;
+    cursor: pointer;
+    position: absolute;
+    z-index: 1000;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.383),
+      rgba(255, 255, 255, 0.154)
+    );
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+
+    overflow: hidden;
+
+    animation: glassVisible 1.8s forwards;
+    opacity: 0;
+    animation-delay: 1.15s;
+    @keyframes glassVisible {
+      0% {
+        opacity: 0;
+        width: 0;
+      }
+      15% {
+        border: 0.5px solid white;
+      }
+      25% {
+        border: 1px solid white;
+      }
+      45% {
+        border: 2px solid white;
+      }
+      65% {
+        border: 1px solid white;
+      }
+      75% {
+        border: 0.5px solid white;
+      }
+      100% {
+        opacity: 1;
+        width: 30rem;
+      }
+    }
+
+    .paymentLogo {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      font-size: 5rem;
+    }
+
+    h1 {
+      position: absolute;
+      bottom: 2rem;
+      left: 2rem;
+      text-wrap: nowrap;
+      overflow: hidden;
+
+      animation: wordIncoming 1s forwards;
+      @keyframes wordIncoming {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    }
+    transition: box-shadow 0.6s ease;
+    &:hover {
+      box-shadow: 0 0.5px 0 0 rgba(255, 255, 255, 0.5);
+    }
+  }
+}
+.hideGlassEffect {
+  animation: hideEffect 0.5s forwards;
+  @keyframes hideEffect {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  h1 {
+    text-wrap: nowrap;
+    overflow: hidden;
+    animation: hideWord 0.5s forwards;
+    @keyframes hideWord {
+      0% {
+        opacity: 1;
+        font-size: 2rem;
+      }
+      100% {
+        opacity: 0;
+        font-size: 0;
+      }
+    }
+  }
+}
