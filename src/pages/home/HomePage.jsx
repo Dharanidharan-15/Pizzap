@@ -27,7 +27,7 @@ const HomePage = () => {
       key_secret: process.env.REACT_APP_kEY_SECRET,
       amount: price * 100,
       currency: "INR",
-      name: "Payzoo Entertainment",
+      name: "Pizzap Entertainment",
       description: "this is for tesing purpose",
       handler: function (response) {
         alert(
